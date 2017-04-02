@@ -1,4 +1,5 @@
 import argparse
+import feature1
 
 parser = argparse.ArgumentParser(description='Process hits from a server log.')
 parser.add_argument('input_server_log',
@@ -13,4 +14,6 @@ parser.add_argument('output_blocked',
     help='Writeable text file to contain potential security threats.')
 args = parser.parse_args()
 
-print(args.input_server_log)
+# Implement Feature 1
+parser1 = feature1.FindMostActive(args.input_server_log, args.output_hosts, n=10)
+parser1.parse()
