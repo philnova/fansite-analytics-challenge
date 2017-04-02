@@ -1,5 +1,6 @@
 import argparse
 import feature1
+import feature2
 
 parser = argparse.ArgumentParser(description='Process hits from a server log.')
 parser.add_argument('input_server_log',
@@ -18,4 +19,6 @@ args = parser.parse_args()
 parser1 = feature1.FindMostActive(args.input_server_log, args.output_hosts, k=10)
 parser1.parse()
 
-
+# Implement Feature 2
+parser2 = feature2.FindMostIntensiveResources(args.input_server_log, args.output_resources, k=10)
+parser2.parse()
