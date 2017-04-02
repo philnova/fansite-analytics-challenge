@@ -15,5 +15,7 @@ parser.add_argument('output_blocked',
 args = parser.parse_args()
 
 # Implement Feature 1
-parser1 = feature1.FindMostActive(args.input_server_log, args.output_hosts, n=10)
+parser1 = feature1.FindMostActive(args.input_server_log, args.output_hosts, k=10)
 parser1.parse()
+
+
